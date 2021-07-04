@@ -1,0 +1,57 @@
+@import "../../../../styles.scss";
+
+:host {
+  .container__header-title {
+    margin: 4.8rem 2.4rem 0rem 2.4rem;
+
+    h1 {
+      font-weight: 800;
+      font-size: 2.5rem;
+      line-height: 3.3rem;
+      color: $black;
+    }
+  }
+
+  .container__filter-pet {
+    margin: 3.2rem 2.4rem 0rem 2.4rem;
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    .container__filter-select{
+      display: flex;   
+      .filter__pets {
+        margin: 0.16rem 0.16rem;
+        width: 15.6rem;
+        height: 8.0rem;
+        background-color: $black;
+        border-radius: 0.8rem;
+        display: flex;
+      }
+
+      img{
+        width: 6.4rem;
+        height: 6.4rem;
+        margin: 0.8rem 1.6rem 0.8rem 0.8rem;
+      }
+      h1{
+        margin-top: 3.1rem;
+        color: $white;
+        font-size: 1.2rem;
+      }
+
+    }
+
+    
+    
+
+
+
+  }
+
+  .container__menu-bottom {
+    position: fixed;
+    bottom: 0;
+    z-index: 4;
+  }
+}

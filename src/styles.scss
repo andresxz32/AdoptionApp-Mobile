@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+///COLORS///
+
+$black:#0E172C;
+$white:#FFFFFE;
+$primary: #FEC7D7;
+$secondary: #A786DF;
+$tertiary:#D9D4E7;
+$green:#85D1CE;
+$blue:#91C1D7;
+$grey:#535353;
+
+
+
+///FONTS///
+@font-face {
+  font-family: Nunito;
+  src: url(/assets/fonts/Nunito-Regular.ttf) format("opentype");
+}
+
+///CLEAR///
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: $primary;
+  font-weight: 400;
+  overflow: hidden;
+  font-size: 10px;
+  font-family: 'Nunito';
+}
+
+body {
+  margin: 0;
+}
+
+.container__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem;
+
+  .container__button-next {
+    width: 32.7rem;
+    height: 4.8rem;
+    color: $white;
+    background: $black;
+    border-radius: 9.8rem;
+    border: none;
+  }
+
+}
