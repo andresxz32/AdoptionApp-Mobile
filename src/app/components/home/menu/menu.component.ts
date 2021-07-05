@@ -17,6 +17,7 @@ export class MenuComponent implements OnInit {
 
   selectItem(title:string){
     this.select = title
+    console.log(title);
     // this._router.navigateByUrl('loading/create-history');
 
   }

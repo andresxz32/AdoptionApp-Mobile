@@ -1,26 +1,30 @@
-<div class="container__header-title">
-    <h1>Adopta una adorable mascota</h1>
-</div>
+<div class="container__home">
+    <!-- <div class="container__header-title">
+        <h1>Adopta una adorable mascota</h1>
+    </div>
 
-<div class="container__filter-pet">
-    <h2>Categorías de mascotas</h2>
-    <div class="container__filter-select">
-        <div class="filter__pets">
-            <img src="../../../../assets/img/menu/dog.png">
-            <h1>Perros</h1>
-        </div>
-        <div class="filter__pets">
-            <img src="../../../../assets/img/menu/cat.png">
-            <h1>Gatos</h1>
+    <div class="container__filter-pet">
+        <h2>Categorías de mascotas</h2>
+        <div class="container__filter-select">
+            <div [ngClass]="select == 'dogs' ? 'filter__pets' : 'notSelected'" (click)="selectFilter('dogs')">
+                <img src="../../../../assets/img/menu/dog.png">
+                <h1>Perros</h1>
+            </div>
+            <div [ngClass]="select == 'cats' ? 'filter__pets' : 'notSelected' " (click)="selectFilter('cats')">
+                <img src="../../../../assets/img/menu/cat.png">
+                <h1>Gatos</h1>
+            </div>
         </div>
     </div>
+
+    <div class="container__pets">
+        <app-dogs-list *ngIf="select == 'dogs'"></app-dogs-list>
+        <app-cats-list *ngIf="select == 'cats'"></app-cats-list>
+    </div> -->
+
+    <app-chats></app-chats>
+    
 </div>
-
-
-
-
-
-
 
 
 <div class="container__menu-bottom">

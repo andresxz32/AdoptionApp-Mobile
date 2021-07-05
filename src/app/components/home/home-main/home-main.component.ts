@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Constants } from 'src/app/shared/constants/constants';
 
 @Component({
   selector: 'app-home-main',
@@ -6,11 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-main.component.scss']
 })
 export class HomeMainComponent implements OnInit {
+  dogs: Array<Object> = Constants.dogs;
+  select: string = 'dogs';
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log('s')
+  }
+
+  selectFilter(filter:string){
+    this.select = filter;
+
   }
 
 }

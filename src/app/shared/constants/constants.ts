@@ -21,4 +21,50 @@ export class Constants {
           iconSelected:'../../../assets/img/menu/profileSelected.png'
         }
       ]
+
+    public static dogs: Array<Object> = [
+      {
+        img:'../../../assets/img/menu/dog1.png',
+        name:'Chester',
+        breed:'Golder retriever',
+      },
+      {
+        img: '../../../assets/img/menu/dog3.png',
+        name:'Papi',
+        breed:'Chihuahua',
+      },
+      {
+        img:'../../../assets/img/menu/dog2.png',
+        name:'Rocky',
+        breed:'Rottweiler',
+      },
+      {
+        img:'../../../assets/img/menu/dog4.png',
+        name:'Pelusa',
+        breed:'Bichón frisé',
+      }
+    ]
+
+    public static cats: Array<Object> = [
+      {
+        img:'../../../assets/img/menu/cat1.png',
+        name:'Matilde',
+        breed:'British Shorthair',
+      },
+      {
+        img: '../../../assets/img/menu/cat2.png',
+        name:'Pelusa',
+        breed:'Birmano',
+      },
+      {
+        img:'../../../assets/img/menu/cat3.png',
+        name:'Kity',
+        breed:'Bombay',
+      },
+      {
+        img:'../../../assets/img/menu/cat4.png',
+        name:'Bombón',
+        breed:'Gato americano',
+      }
+    ]
 }

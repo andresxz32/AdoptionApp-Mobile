@@ -12,6 +12,10 @@ const routes: Routes = [
       import('./components/home/home.module').then(m => m.HomeModule)
   },
   {
+    path: 'message', loadChildren: () =>
+      import('./components/chat/messages.module').then(m => m.MessagesModule)
+  },
+  {
     path: '',
     redirectTo: 'loading/find-friend',
     pathMatch: 'full'
