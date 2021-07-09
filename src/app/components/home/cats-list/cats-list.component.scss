@@ -1,0 +1,14 @@
+:host{
+    .container__pets-item {
+      display: flex;
+      flex-wrap: wrap;
+  
+      img {
+        margin-right: 8px;
+      }
+  
+      .container__pets-img:nth-child(even) {
+        margin-top: 24px;
+      }
+    }
+  }

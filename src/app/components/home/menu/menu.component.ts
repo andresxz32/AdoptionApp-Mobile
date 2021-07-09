@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/app.reducer';
 import { Constants } from 'src/app/shared/constants/constants';
+import * as action from '../../../ngrx/actions/menu.action';
 
 @Component({
   selector: 'app-menu',
@@ -10,15 +12,14 @@ import { Constants } from 'src/app/shared/constants/constants';
 export class MenuComponent implements OnInit {
   select: string = 'Home'
   buttons: Array<Object> = Constants.buttons;
-  constructor(private _router:Router) { }
+  constructor(private _store:Store<AppState>) { }
 
   ngOnInit(): void {
   }
 
-  selectItem(title:string){
-    this.select = title
-    console.log(title);
-    // this._router.navigateByUrl('loading/create-history');
+  selectItem(menu:string){
+    this.select = menu
+    this._store.dispatch(action.selectMenu({menu:menu}));
 
   }
 
