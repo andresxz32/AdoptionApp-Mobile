@@ -4,11 +4,13 @@
       flex-wrap: wrap;
   
       img {
-        margin-right: 8px;
+        margin-right: 0.8rem;
+        width: 15.5rem;
+        height: 25rem;
       }
   
       .container__pets-img:nth-child(even) {
-        margin-top: 24px;
+        margin-top: 2.4rem;
       }
     }
   }

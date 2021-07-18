@@ -1,84 +1,82 @@
 @import "../../../../styles.scss";
 
 :host {
+  .container__header-title {
+    margin: 4.8rem 2.4rem 0rem 2.4rem;
+    width: 32.7rem;
+    height: 6.6rem;
+    h1 {
+      font-weight: 800;
+      font-size: 2.6rem;
+      line-height: 3.3rem;
+      color: $black;
+    }
+  }
 
-  .container__home {
-    overflow: scroll;
+  .container__filter-pet {
+    margin: 3.2rem 2.4rem 0rem 2.4rem;
 
-    .container__header-title {
-      margin: 4.8rem 2.4rem 0rem 2.4rem;
+    p {
+      font-family: Nunito;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+      letter-spacing: 0.0015em;
+    }
+
+    .container__filter-select {
+      display: flex;
+      width: 32.7rem;
+      margin: 0rem 1rem 0rem 1rem;
+
+      .filter__pets {
+        margin-right: 1.6rem;
+        width: 15.6rem;
+        height: 8.0rem;
+        background-color: $black;
+        border-radius: 0.8rem;
+        display: flex;
+      }
+
+      .notSelected {
+        margin-right: 1.6rem;
+        width: 15.6rem;
+        height: 8.0rem;
+        background-color: $black;
+        border-radius: 0.8rem;
+        display: flex;
+        opacity: 0.5;
+
+      }
+
+
+      img {
+        width: 6.4rem;
+        height: 6.4rem;
+        margin: 0.8rem 1.6rem 0.8rem 0.8rem;
+      }
 
       h1 {
-        font-weight: 800;
-        font-size: 2.6rem;
-        line-height: 3.3rem;
-        color: $black;
-      }
-    }
-
-    .container__filter-pet {
-      margin: 3.2rem 2.4rem 0rem 2.4rem;
-
-      p {
-        font-family: Nunito;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 25px;
-        letter-spacing: 0.0015em;
+        margin-top: 3.1rem;
+        color: $white;
+        font-size: 1.2rem;
       }
 
-      .container__filter-select {
-        display: flex;
-        width: 32.7rem;
-        margin: 0rem 1rem 0rem 1rem;
-
-        .filter__pets {
-          margin-right: 1.6rem;
-          width: 15.6rem;
-          height: 8.0rem;
-          background-color: $black;
-          border-radius: 0.8rem;
-          display: flex;
-        }
-
-        .notSelected {
-          margin-right: 1.6rem;
-          width: 15.6rem;
-          height: 8.0rem;
-          background-color: $black;
-          border-radius: 0.8rem;
-          display: flex;
-          opacity: 0.5;
-
-        }
-
-
-        img {
-          width: 6.4rem;
-          height: 6.4rem;
-          margin: 0.8rem 1.6rem 0.8rem 0.8rem;
-        }
-
-        h1 {
-          margin-top: 3.1rem;
-          color: $white;
-          font-size: 1.2rem;
-        }
-
-      }
     }
+  }
 
-    .container__pets {
-      height: 54.8rem;
-      width: 32.7rem;
-      margin: 2.4rem 2.4rem 2.4rem 2.4rem;
-    }
-
+  .container__pets {
+    height: 54.8rem;
+    width: 32.7rem;
+    margin: 2.4rem 2.4rem 2.4rem 2.4rem;
   }
 
 
+
+
   .container__menu-bottom {
+    width: 100%;
     position: fixed;
     bottom: 0;
     z-index: 4;
