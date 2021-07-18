@@ -5,7 +5,7 @@
         </div>
 
         <div class="container__filter-pet">
-            <h2>Categorías de mascotas</h2>
+            <p>Categorías de mascotas:</p>
             <div class="container__filter-select">
                 <div [ngClass]="select == 'dogs' ? 'filter__pets' : 'notSelected'" (click)="selectFilter('dogs')">
                     <img src="../../../../assets/img/menu/dog.png">
@@ -28,7 +28,12 @@
         <app-chats></app-chats>
     </div>
 
-
+    <div *ngIf="optionMenu === 'Favorite'">
+        <app-favorites></app-favorites>
+    </div>
+    <div *ngIf="optionMenu === 'Profile'">
+        <app-profile></app-profile>
+    </div>
 </div>
 
 

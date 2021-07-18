@@ -19,9 +19,13 @@
     .container__filter-pet {
       margin: 3.2rem 2.4rem 0rem 2.4rem;
 
-      h2 {
-        font-size: 1.6rem;
+      p {
+        font-family: Nunito;
+        font-style: normal;
         font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0.0015em;
       }
 
       .container__filter-select {
@@ -37,7 +41,8 @@
           border-radius: 0.8rem;
           display: flex;
         }
-        .notSelected{
+
+        .notSelected {
           margin-right: 1.6rem;
           width: 15.6rem;
           height: 8.0rem;
@@ -45,9 +50,9 @@
           border-radius: 0.8rem;
           display: flex;
           opacity: 0.5;
-          
+
         }
-        
+
 
         img {
           width: 6.4rem;

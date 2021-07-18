@@ -24,6 +24,7 @@ export class HomeMainComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.onDestroy$.next(true);
+    this.onDestroy$.complete()
   }
 
   startSub() {

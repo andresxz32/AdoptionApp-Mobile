@@ -67,4 +67,32 @@ export class Constants {
         breed:'Gato americano',
       }
     ]
+
+    public static favorites: Array<Object> = [
+      {
+        img:'../../../assets/img/menu/dog2.png',
+        name:'Rocky',
+        breed:'Rottweiler',
+      },
+      {
+        img: '../../../assets/img/menu/dog3.png',
+        name:'Papi',
+        breed:'Chihuahua',
+      },
+      {
+        img:'../../../assets/img/menu/dog5.png',
+        name:'Charlie',
+        breed:'Chihuahua',
+      },
+      {
+        img:'../../../assets/img/menu/dog4.png',
+        name:'Pelusa',
+        breed:'Bichón frisé',
+      },
+      {
+        img:'../../../assets/img/menu/dog6.png',
+        name:'Martin',
+        breed:'Labrador Retriever',
+      }
+    ]
 }
