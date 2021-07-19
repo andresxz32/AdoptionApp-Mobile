@@ -4,6 +4,9 @@ import { Store } from "@ngrx/store";
 import { AppState } from 'src/app/app.reducer';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { TokenService } from 'src/app/services/token.service';
+import { PetFindService } from 'src/app/services/pet-find.service';
+
 
 @Component({
   selector: 'app-home-main',
@@ -16,10 +19,11 @@ export class HomeMainComponent implements OnInit, OnDestroy {
   optionMenu: string;
   onDestroy$: Subject<boolean> = new Subject();
 
-  constructor(private store: Store<AppState>) { }
+  constructor(private _store: Store<AppState>,private _token:TokenService) { }
 
   ngOnInit(): void {
     this.startSub();
+    // this._token.getToken();
   }
 
   ngOnDestroy(): void {
@@ -28,7 +32,7 @@ export class HomeMainComponent implements OnInit, OnDestroy {
   }
 
   startSub() {
-    this.store.select('menu').pipe(takeUntil(this.onDestroy$)).subscribe(({ menu }) => {
+    this._store.select('menu').pipe(takeUntil(this.onDestroy$)).subscribe(({ menu }) => {
       this.optionMenu = menu;
     })
   }
