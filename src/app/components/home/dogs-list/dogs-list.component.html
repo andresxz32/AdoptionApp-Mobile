@@ -1,7 +1,10 @@
-<div class="container__pets-item" >
-    <div class="container__pets-img" *ngFor="let dog of dogs">
-        <img class="contaier__img" src={{dog.primary_photo_cropped.small}} alt="">
+<virtual-scroller #scroll [items]="dogs">
+    <div class="container__pets-item">
+        <div class="container__pets-img" *ngFor="let dog of scroll?.viewPortItems;">
+            <div class="container__pets-card">
+                <img src={{dog.primary_photo_cropped.medium}} alt="">
+            </div>
+        </div>
     </div>
-</div>
-<div style="height: 10rem;"></div>
-
+    <div style="width: 100%; height: 250px;"></div>
+</virtual-scroller>

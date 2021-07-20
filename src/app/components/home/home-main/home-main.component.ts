@@ -23,7 +23,7 @@ export class HomeMainComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.startSub();
-    // this._token.getToken();
+    this._token.getToken();
   }
 
   ngOnDestroy(): void {

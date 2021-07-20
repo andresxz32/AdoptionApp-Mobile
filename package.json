@@ -23,6 +23,7 @@
     "@ngrx/store-devtools": "^8.6.0",
     "@ngx-pwa/local-storage": "^9.0.3",
     "@petfinder/petfinder-js": "^1.0.6",
+    "ngx-virtual-scroller": "^4.0.3",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

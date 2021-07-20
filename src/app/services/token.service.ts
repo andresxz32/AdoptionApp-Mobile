@@ -22,7 +22,6 @@ export class TokenService {
     this.addedParams();
     return this._http.post(API_URL + 'oauth2/token',
       BODY.toString(), { headers: HEADERS }).subscribe((data) => {
-        console.log('token',data)
         this.saveTokenStorage(data)
       })
   }

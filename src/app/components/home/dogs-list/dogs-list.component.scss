@@ -1,15 +1,19 @@
-:host{
-  .container__pets-item {
-    display: flex;
-    flex-wrap: wrap;
-    overflow-y: scroll;
-    img {
-      margin-right: .8rem;
-      width: 15.5rem;
-      height: 25rem;
+:host {
+  virtual-scroller {
+    height: 100%;
+    .container__pets-item {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      img {
+        margin-top: 2rem;
+        margin-right: .8rem;
+        width: 28rem;
+        height: 30rem;
+        border-radius: 2.0rem;
+      }
     }
-    .container__pets-img:nth-child(even) {
-      margin-top: 2.4rem;
-    }
+
+
   }
 }

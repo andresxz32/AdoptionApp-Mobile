@@ -9,13 +9,15 @@ import { CatsListComponent } from './cats-list/cats-list.component';
 import { ChatsComponent } from './chats/chats.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { ProfileComponent } from './profile/profile.component';
+import { VirtualScrollerModule } from 'ngx-virtual-scroller';
 
 
 @NgModule({
   declarations: [HomeMainComponent, DogsListComponent, CatsListComponent,MenuComponent,ChatsComponent, FavoritesComponent, ProfileComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    VirtualScrollerModule,
   ],
 })
 export class HomeModule { }

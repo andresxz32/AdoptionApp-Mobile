@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { PetFindService } from 'src/app/services/pet-find.service';
-import { Constants } from 'src/app/shared/constants/constants';
+import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
 
 @Component({
   selector: 'app-dogs-list',
@@ -8,14 +9,25 @@ import { Constants } from 'src/app/shared/constants/constants';
   styleUrls: ['./dogs-list.component.scss']
 })
 export class DogsListComponent implements OnInit {
-  dogs;
-  constructor(private _service: PetFindService,) { }
+  @ViewChild('scroll', { static: true }) scroller: VirtualScrollerComponent;
+  dogs: Array<Object> = [];
+  page: number = 1;
+  dogsAux: Array<Object> = [];
+  constructor(private _service: PetFindService, private _sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
-    this._service.getDogs().subscribe(res =>{
-      console.log(res)
-      this.dogs = res['animals']
-    } );
+    this.getDogs(this.page);
   }
 
+  getDogs(page) {
+    this._service.getDogs(page).subscribe(response => {
+      this.dogsAux = this.dogsAux.concat(response)
+      if (this.dogsAux.length >= 50) {
+        this.dogs = this.dogsAux;
+      } else {
+        this.getDogs(this.page++);
+      }
+    });
+
+  }
 }
