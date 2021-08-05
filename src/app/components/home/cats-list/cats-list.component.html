@@ -1,6 +1,18 @@
-<div class="container__pets-item" >
-    <div class="container__pets-img" *ngFor="let cat of cats">
-        <img class="contaier__img" src={{cat.img}} alt="">
+<div class="container__infinity-scroll" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()" [scrollWindow]="false">
+    <div class="container__pets-item">
+        <div class="container__pets-img" *ngFor="let cat of cats">
+            <div class="absolute__container">
+                <h1 class="first__p">{{cat.name}}</h1>
+                <p class="second__p">{{cat.breeds.primary}}</p>
+            </div>
+            <img src={{cat.primary_photo_cropped.small}}>
+
+
+        </div>
     </div>
+    <div class="loading" *ngIf="loading">
+        <img src="../../../../assets/spinner/loading.svg">
+    </div>
+    <!-- <div style="width: 100%; height: 22rem;"></div> -->
 </div>
-<div style="height: 10rem;"></div>

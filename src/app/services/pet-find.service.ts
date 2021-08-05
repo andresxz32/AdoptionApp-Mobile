@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { TokenService } from './token.service';
 import { environment } from 'src/environments/environment';
-import { filter, map, tap } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 
 const API_URL = environment.API_URL;
@@ -14,6 +14,13 @@ export class PetFindService {
 
   getDogs(page) {
     return this._http.get(`${API_URL}animals?type=dog&page=${page}`)
+      .pipe(map(response => response['animals']
+        .filter(item => item.primary_photo_cropped != null)));
+  }
+
+
+  getCats(page) {
+    return this._http.get(`${API_URL}animals?type=cat&page=${page}`)
       .pipe(map(response => response['animals']
         .filter(item => item.primary_photo_cropped != null)));
   }

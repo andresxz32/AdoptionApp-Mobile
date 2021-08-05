@@ -1,33 +1,35 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { Component, OnInit } from '@angular/core';
+import { Functions } from 'src/app/functions/functions';
 import { PetFindService } from 'src/app/services/pet-find.service';
-import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
-
 @Component({
   selector: 'app-dogs-list',
   templateUrl: './dogs-list.component.html',
   styleUrls: ['./dogs-list.component.scss']
 })
 export class DogsListComponent implements OnInit {
-  @ViewChild('scroll', { static: true }) scroller: VirtualScrollerComponent;
   dogs: Array<Object> = [];
   page: number = 1;
   dogsAux: Array<Object> = [];
-  constructor(private _service: PetFindService, private _sanitizer: DomSanitizer) { }
+  loading: boolean = true;
+  constructor(private _service: PetFindService) { }
 
   ngOnInit(): void {
     this.getDogs(this.page);
   }
 
-  getDogs(page) {
+  getDogs(page): void {
     this._service.getDogs(page).subscribe(response => {
-      this.dogsAux = this.dogsAux.concat(response)
-      if (this.dogsAux.length >= 50) {
-        this.dogs = this.dogsAux;
-      } else {
-        this.getDogs(this.page++);
-      }
+      this.dogs = this.removeDuplicates(this.dogs.concat(response))
+      this.loading = false;
     });
+  }
 
+  onScroll(): void {
+    this.loading = true;
+    this.getDogs(this.page++);
+  }
+
+  removeDuplicates(array) {
+    return Functions.run().removeDuplicates(array);
   }
 }
