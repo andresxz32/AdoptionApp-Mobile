@@ -13,7 +13,7 @@ export class TokenInterceptor implements HttpInterceptor {
         if (req.url == 'https://api.petfinder.com/v2/oauth2/token') {
             return next.handle(req);
         } else {
-            return this._token.readTokenStorage().pipe(mergeMap((token:any) => {
+            return this._token.readTokenStorage().pipe(mergeMap((token: any) => {
                 const newReq = req.clone({
                     setHeaders: {
                         'Content-Type': 'application/json; charset=utf-8',

@@ -3,22 +3,26 @@ export class Constants {
         {
           title: 'Home',
           icon: '../../../assets/img/menu/home.png',
-          iconSelected:'../../../assets/img/menu/homeSelected.png'
+          iconSelected:'../../../assets/img/menu/homeSelected.png',
+          route: 'pets'
         },
         {
           title: 'Chat',
           icon: '../../../assets/img/menu/message.png',
-          iconSelected:'../../../assets/img/menu/messageSelected.png'
+          iconSelected:'../../../assets/img/menu/messageSelected.png',
+          route: 'chats'
         },
         {
           title: 'Favorite',
           icon: '../../../assets/img/menu/like.png',
-          iconSelected:'../../../assets/img/menu/likeSelected.png'
+          iconSelected:'../../../assets/img/menu/likeSelected.png',
+          route: 'favorites'
         },
         {
           title: 'Profile',
           icon: '../../../assets/img/menu/profile.png',
-          iconSelected:'../../../assets/img/menu/profileSelected.png'
+          iconSelected:'../../../assets/img/menu/profileSelected.png',
+          route: 'profile'
         }
       ]
 

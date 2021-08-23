@@ -5,15 +5,11 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: 'loading', loadChildren: () =>
-      import('./components/info-preview/info-preview.module').then(m => m.InfoPreviewModule)
+      import('./modules/info-preview/info-preview.module').then(m => m.InfoPreviewModule)
   },
   {
     path: 'home', loadChildren: () =>
-      import('./components/home/home.module').then(m => m.HomeModule)
-  },
-  {
-    path: 'message', loadChildren: () =>
-      import('./components/chat/messages.module').then(m => m.MessagesModule)
+      import('./modules/home/home.module').then(m => m.HomeModule)
   },
   {
     path: '',
