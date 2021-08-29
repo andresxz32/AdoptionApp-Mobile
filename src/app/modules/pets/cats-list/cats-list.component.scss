@@ -1,0 +1,66 @@
+:host {
+  margin-left: 2.4rem;
+  margin-top: 2.4rem;
+
+  .container__infinity-scroll {
+    height: 100%;
+    overflow-y: scroll;
+
+    .container__pets-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .container__pets-img {
+        width: 15.6rem;
+        height: 25rem;
+        border-radius: 2.0rem;
+        position: relative;
+
+        &:nth-child(even) {
+          margin-top: 2.4rem;
+        }
+
+        .absolute__container {
+          width: 100%;
+          position: absolute;
+          border-radius: 1.6rem;
+          bottom: 0rem;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0) 26.42%, #000000 99.33%);
+
+          .first__p {
+            left: 1.6rem;
+            bottom: 2.5rem;
+            position: relative;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 19px;
+            letter-spacing: 0.005em;
+            color: #FFFFFF;
+          }
+
+          .second__p {
+            left: 1.6rem;
+            bottom: 2rem;
+            position: relative;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            letter-spacing: 0.005em;
+            color: #FFFFFF;
+          }
+        }
+
+        img {
+          width: 15.6rem;
+          height: 25rem;
+          border-radius: 2.0rem;
+        }
+      }
+
+    }
+
+
+  }
+}

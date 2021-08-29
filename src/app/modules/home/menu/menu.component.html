@@ -1,0 +1,7 @@
+<div class="container__background-color">
+    <div class="container__buttons">
+       <div class="container__button-icon" *ngFor="let button of buttons">
+           <button [ngClass]="select == button.title ? 'selected' : 'not-selected'"(click)="selectItem(button.route,button.title)"><img src='{{select !== button.title ? button.icon : button.iconSelected }}' alt="">{{select == button.title ? button.title : '' }}</button>
+       </div>
+    </div>
+</div>

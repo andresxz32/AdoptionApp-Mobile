@@ -1,0 +1,10 @@
+@import "../../../../styles.scss";
+
+:host {
+  .container__menu-bottom {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 4;
+  }
+}

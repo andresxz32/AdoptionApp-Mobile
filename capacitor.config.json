@@ -1,0 +1,12 @@
+{
+    "appId": "adoptionApp",
+    "appName": "adoptionApp",
+    "bundledWebRuntime": false,
+    "npmClient": "npm",
+    "webDir": "dist/Adoption-Pets",
+    "plugins": {
+      "SplashScreen": {
+        "launchShowDuration": 0
+      }
+    }
+  }
